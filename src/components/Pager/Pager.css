@@ -1,0 +1,66 @@
+.pager {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.pager-text {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.pager-dots {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 300px;
+}
+
+.pager-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pager-dot.active {
+  background-color: #000;
+  transform: scale(1.2);
+}
+
+.pager-dot:hover {
+  background-color: #aaa;
+}
+
+/* Адаптивность для пейджера */
+@media (max-width: 768px) {
+  .pager-text {
+    font-size: 14px;
+  }
+  
+  .pager-dots {
+    gap: 6px;
+    max-width: 100%;
+  }
+  
+  .pager-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pager-dots {
+    gap: 4px;
+  }
+  
+  .pager-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
